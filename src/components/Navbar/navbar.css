@@ -1,0 +1,70 @@
+.navbar{
+    max-width: 200px;
+    overflow: hidden;
+    margin-left: 9vw;
+    position: fixed;
+    z-index: 100;
+    
+}
+.navbar-content {
+  /* background: rgb(255, 0, 0); */
+  display: flex;
+  margin-top: 15px;
+  perspective: 1000px;
+}
+.navbar-content .logo {
+    margin-right: auto; 
+    font-family: 'Pacifico', cursive;
+    padding: 15px 20px;
+    font-size: 40px;
+}
+
+.navbar-content .nav-links { 
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+/* .navbar-content a{ 
+    padding: 10px 15px ;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: all .1s cubic-bezier(.45,.05,.55,.95);
+    background: #fff;
+    border-radius: 10px;
+    font-size: 25px;
+} */
+/* .navbar-content a:hover{ 
+    transform: scale(101%) rotateY(360deg); 
+    outline: solid 5px red;
+} */
+
+
+.nav-links button{
+    padding: 10px ;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: all .1s cubic-bezier(.45,.05,.55,.95);
+}
+
+.nav-links button:hover{
+    transform: scale(101%) rotateY(360deg); 
+    outline: solid 5px red;
+}
+
+.btn.btn-light{ 
+    cursor: pointer; 
+    border-radius: 25px;
+    background: #ffffff; 
+    padding: 10px 15px ;
+    margin: 5px 20px; 
+    font-family: 'Poppins', sans-serif;
+    transition: transform .25s ease;
+    transition: background .75s ease;
+}
+ 
+.btn.btn-light:hover{
+    transform: scale3d(1.2, 1.2, 1.2);
+    background: #000;
+    color: #fff;
+} 
