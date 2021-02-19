@@ -3,7 +3,7 @@ import gsap from 'gsap';
  
 import meet from './img/c-des.png'
 
-const Creative = () => {
+const Creative = ({offsetY}) => {
 
     const Stitle = React.useRef(null)
     const Spara = React.useRef(null)
@@ -18,10 +18,10 @@ const Creative = () => {
 
     }, [])
 
-    return (      <div style={{background:"#fff"}}>
+    return (      <div style={{background:"#fff",marginBottom:'200px'}}>
         <div className="container">
             <div className="showcase-sec-container">
-                 <div className="showcase-sec-content">
+                 <div className="showcase-sec-content" style={{transform:`translateY(${offsetY * .05}px)`}}>
                     <div className="title">
                         <h1 style={{fontSize:'1.7em'}} ref={Stitle}><span className="red">Creative</span>&nbsp;Designer</h1>
                     </div>
@@ -30,7 +30,7 @@ const Creative = () => {
                         <button className="btn btn-sub">Meet Here</button>
                     </div>
                 </div> 
-                 <div className="img"><img style={{width:'70%',marginLeft:'auto',display:'block'}}ref={SImg} src={meet} alt="" /></div>
+                 <div className="img"  style={{transform:`translateY(${offsetY * -.05}px)`,marginTop:'300px'}}><img style={{width:'70%',marginLeft:'auto',display:'block'}}ref={SImg} src={meet} alt="" /></div>
             </div>
         </div>
     </div> );

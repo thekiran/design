@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import './showcase.css'
 
 import meet from './img/meetimg.png'
-const MeetSection = () => {
+const MeetSection = ({offsetY}) => {
     const Stitle = React.useRef(null)
     const Spara = React.useRef(null)
     const SImg = React.useRef(null)
@@ -22,7 +22,7 @@ const MeetSection = () => {
         <React.Fragment>
             <div className="container">
                 <div className="showcase-sec-container">
-                     <div className="showcase-sec-content">
+                     <div className="showcase-sec-content" style={{transform:`translateY(${offsetY * .1}px)`}}>
                         <div className="title">
                             <h1 ref={Stitle}>Meet <span className="red">My</span> Team</h1>
                         </div>
@@ -31,7 +31,7 @@ const MeetSection = () => {
                             <button className="btn btn-sub">Meet Here</button>
                         </div>
                     </div> 
-                     <div className="img"><img ref={SImg} src={meet} alt="" /></div>
+                     <div className="img" style={{transform:`translateY(${offsetY * -.03}px)`}}><img ref={SImg} src={meet} alt="" /></div>
                 </div>
             </div>
         </React.Fragment>

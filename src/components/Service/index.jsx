@@ -9,20 +9,20 @@ import logo4 from './img/serlogo4.png'
 
 import './services.css'
 import Creative from './Creative'
-const Service = () => {
+const Service = ({offsetY}) => {
     return (
         <div className="service">
             
             <div className="container">
-            <div className="text-center">
+            <div className="text-center"  style={{transform:`translateY(${offsetY * -.02}px)`}}>
             <div className="title">
                      <h1><span className="red">Our</span>Services</h1>
                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum sit cum ad maxime voluptatem quasi nostrum labore omnis, debitis sint impedit pariatur veniam aperiam deserunt!</p>
                      </div>
             </div> 
                <div className="service-container">
-               <div className="img"><img src={main} alt=""/></div>
-                <div className="service-content">
+               <div className="img" style={{transform:`translateY(${offsetY * .01}px)`}}><img src={main} alt=""/></div>
+                <div className="service-content" style={{transform:`translateY(${offsetY * -.02}px)`}}>
                <div className="logos">
                 <div><img src={logo1} alt=""/>
                     <img src={logo2} alt=""/></div>
@@ -35,7 +35,7 @@ const Service = () => {
         </div>
         </div>
 
-        <Creative />
+        <Creative offsetY={offsetY} />
         </div>
     )
 }

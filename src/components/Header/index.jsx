@@ -4,15 +4,15 @@ import logo2 from './img/logo2.png'
 import logo3 from './img/logo3.png'
 
 import './header.css'
-const Header = () => <div className="header">
+const Header = ({offsetY}) => <div className="header">
     <div className="container">
         <div className="main-header">
-            <div className="header-content">
+            <div className="header-content"  style={{transform:`translateY(${offsetY * .25}px)`}}>
                 <div className="head-cont">
                     <h1>Design<span>er</span> </h1>
                     
                     <h4>
-                        <ul>
+                        <ul> 
                             <li>
                                 <span>
                                 Strategy
@@ -44,7 +44,7 @@ const Header = () => <div className="header">
                 {/* <img src={pop1} /> */}
                     </div>
             </div>
-            <div className="header-hero">
+            <div className="header-hero" style={{transform:`translateY(${offsetY * -.1}px)`}}>
                 <img src={hero} />
                 </div>
 

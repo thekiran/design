@@ -5,11 +5,11 @@ import './showcase.css'
 
 import pro from './img/proing.png'
 import MeetSection from './MeetMyTeam';
-const Showcase = () => {
+const Showcase = ({offsetY}) => {
     const Ftitle = React.useRef(null)
     const Fpara = React.useRef(null)
     const FImg = React.useRef(null)
-
+    console.log(offsetY)
     React.useEffect(()=>{
         gsap.from(Ftitle.current,{x:200,opacity:0,duration:2,scrollTrigger:Ftitle.current,})
 
@@ -23,8 +23,8 @@ const Showcase = () => {
         <div className="showcase">
            <div className="container">
                <div className="showcase-first-container">
-               <div className="img"><img ref={FImg} src={pro} alt=""/></div>
-                <div className="showcase-first-content">
+               <div className="img" style={{transform:`translateY(${offsetY * .07}px)`}}><img ref={FImg} src={pro} alt=""/></div>
+                <div className="showcase-first-content"  style={{transform:`translateY(${offsetY * -.01}px)`}}>
                  <div className="title">
                      <h1 ref={Ftitle}>Design <span className="red">Process</span></h1>
                      </div>
@@ -35,7 +35,7 @@ const Showcase = () => {
                </div> 
                 </div>
            </div>
-           <MeetSection />
+           <MeetSection offsetY={offsetY} />
         </div>
     )
 }
