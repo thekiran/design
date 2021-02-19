@@ -9,13 +9,15 @@ const Showcase = ({offsetY}) => {
     const Ftitle = React.useRef(null)
     const Fpara = React.useRef(null)
     const FImg = React.useRef(null)
-    console.log(offsetY)
+    // console.log(offsetY)
+    let duration = 1
+    let delay = 1
     React.useEffect(()=>{
-        gsap.from(Ftitle.current,{x:200,opacity:0,duration:2,scrollTrigger:Ftitle.current,})
+        gsap.from(Ftitle.current,{x:200,opacity:0,duration:duration,scrollTrigger:".btn-sub",delay})
 
-        gsap.from(Fpara.current,{x:100,scrollTrigger:Fpara.current, opacity:0,duration:3})
+        gsap.from(Fpara.current,{x:100,scrollTrigger:".btn-sub", opacity:0,duration:duration,delay})
   
-        gsap.from(FImg.current,{x:-100,scrollTrigger:FImg.current, opacity:0,duration:4})
+        gsap.from(FImg.current,{x:-100,scrollTrigger:".btn-sub", opacity:0,duration:duration,delay})
   
     },[])
 

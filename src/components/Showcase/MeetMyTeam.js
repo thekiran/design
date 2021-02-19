@@ -8,13 +8,14 @@ const MeetSection = ({offsetY}) => {
     const Stitle = React.useRef(null)
     const Spara = React.useRef(null)
     const SImg = React.useRef(null)
-
+    let duration = 1
+    let delay = 2
     React.useEffect(() => {
-        gsap.from(Stitle.current, { x: 200, opacity: 0, duration: 2, scrollTrigger: Stitle.current, })
+        gsap.from(Stitle.current, { x: 400, opacity: 0, duration, scrollTrigger: Stitle.current,delay })
 
-        gsap.from(Spara.current, { x: 100, scrollTrigger: Spara.current, opacity: 0, duration: 3 })
+        gsap.from(Spara.current, { x: 200, scrollTrigger: Spara.current, opacity: 0, duration,delay })
 
-        gsap.from(SImg.current, { x: -100, scrollTrigger: SImg.current, opacity: 0, duration: 4 })
+        gsap.from(SImg.current, { x: -200, scrollTrigger: SImg.current, opacity: 0, duration,delay })
 
     }, [])
 

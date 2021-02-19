@@ -97,7 +97,7 @@ margin-top: 1.5em;
     text-align: center;
     cursor: pointer;
     transition: all .25s ease-in;
-    box-shadow: 0px 30px 61px 5px rgba(0,0,0,0.6);
+    box-shadow: 0px 15px 40px 0px rgba(0,0,0,0.4);
     /* -webkit-box-shadow: 9px 80px 31px -1px rgba(0,0,0,0.74); */
     /* -moz-box-shadow: 9px 80px 31px -1px rgba(0,0,0,0.74); */
 }
@@ -108,7 +108,7 @@ margin-top: 1.5em;
     color: #fff;
     transform: translateX(0px) scale(1.1);
     /* box-shadow: 0 0px 40px #000; */
-    box-shadow: 0px 10px 61px 5px rgba(0,0,0,1);
+    box-shadow: 0px 25px 50px 0px rgba(0,0,0,4);
 /* -webkit-box-shadow: -1px 115px 46px -48px rgba(0,0,0,0.58);
 -moz-box-shadow: -1px 115px 46px -48px rgba(0,0,0,0.58); */
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import gsap from 'gsap'
 
 import main from './img/sermain.png'
 
@@ -10,6 +11,13 @@ import logo4 from './img/serlogo4.png'
 import './services.css'
 import Creative from './Creative'
 const Service = ({offsetY}) => {
+    React.useEffect(()=>{
+
+        gsap.from(".brand-imgs",{scale:0,
+            opacity:0,stagger:.5,duration:.5,scrollTrigger:".brand-imgs",delay:1})
+    
+    },[])
+    
     return (
         <div className="service">
             
@@ -24,11 +32,11 @@ const Service = ({offsetY}) => {
                <div className="img" style={{transform:`translateY(${offsetY * .01}px)`}}><img src={main} alt=""/></div>
                 <div className="service-content" style={{transform:`translateY(${offsetY * -.02}px)`}}>
                <div className="logos">
-                <div><img src={logo1} alt=""/>
+                <div><img src={logo1} className="brand-imgs" alt=""/>
                     <img src={logo2} alt=""/></div>
                 <div>
-                    <img src={logo3} alt=""/>
-                    <img src={logo4} alt=""/>
+                    <img src={logo3} className="brand-imgs" alt=""/>
+                    <img src={logo4} className="brand-imgs" alt=""/>
                 </div>
                </div>
                 </div>

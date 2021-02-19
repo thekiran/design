@@ -6,7 +6,8 @@ import Showcase from './components/Showcase';
 import Service from './components/Service';
 
 function App() {
-   const [offsetY, setOffsetY] = React.useState(0)
+  // let offsetY = window.pageYOffset
+  const [offsetY, setOffsetY] = React.useState(0)
   const handleScroll = () => setOffsetY(window.pageYOffset) 
 
   React.useEffect(()=>{
@@ -14,7 +15,7 @@ function App() {
     return () => window.removeEventListener("scroll",handleScroll)
   },[])
   return (
-    <div className="App"  style={{transform:`translateY(${offsetY * 0.2}px)`}}>
+    <div className="App">
       <Navbar />
       <Header offsetY={offsetY}/>
       <Showcase offsetY={offsetY} />
